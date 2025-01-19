@@ -19,11 +19,17 @@ const Header = (props) => {
 
 
 
-export default function Genetrator() {
+export default function Genetrator({
+  poison,
+  setPoison,
+  muscles,
+  setMuscles,
+  goal,
+  setGoal,
+  updateWorkout
+}) {
   const [showModal, setShowModal] = useState(false);
-  const [poison, setPoison] = useState('individual');
-  const [muscles, setMuscles] = useState([]);
-  const [goal, setGoal] = useState('strength_power');
+
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -116,7 +122,7 @@ export default function Genetrator() {
       />
 
 
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
 
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
 
@@ -128,7 +134,7 @@ export default function Genetrator() {
         })}
       </div>
 
-      <Button text={'Formulate'} />
+      <Button func={updateWorkout} text={'Formulate'} />
     </SectionWrapper>
   )
 }
