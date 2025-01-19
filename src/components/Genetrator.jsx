@@ -64,7 +64,11 @@ export default function Genetrator() {
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
 
           return (
-            <button onClick={() => { setPoison(type) }} className={'bg-slate-950 border  duration-200 px-4 hover:border-blue-600 py-3 rounded-lg ' + (type === poison ? ' border-blue-600' : ' border-blue-400')} key={typeIndex}>
+            <button onClick={() => {
+              setPoison(type);
+              setMuscles([]);
+            }}
+              className={'bg-slate-950 border  duration-200 px-4 hover:border-blue-600 py-3 rounded-lg ' + (type === poison ? ' border-blue-600' : ' border-blue-400')} key={typeIndex}>
               <p className='capitalize'>{type.replaceAll('_', ' ')}</p>
             </button>
           )
