@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Button({text}) {
     return (
-        <button className='px-6 py-4 rounded-md border-[2px] border-blue-400 border-solid bg-slate-950 blueShadow duration-200'>
+        <button className='px-6 mx-auto py-4 rounded-md border-[2px] border-blue-400 border-solid bg-slate-950 blueShadow duration-200'>
             <p>{text}</p>
         </button>
     )

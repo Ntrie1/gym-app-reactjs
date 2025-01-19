@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SectionWrapper from './SectionWrapper'
 import { SCHEMES, WORKOUTS } from '../utils/swoldier';
+import Button from './Button';
 
 const Header = (props) => {
   const { index, title, description } = props;
@@ -127,6 +128,7 @@ export default function Genetrator() {
         })}
       </div>
 
+      <Button text={'Formulate'} />
     </SectionWrapper>
   )
 }
