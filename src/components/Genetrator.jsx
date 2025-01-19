@@ -58,6 +58,7 @@ export default function Genetrator({
 
   return (
     <SectionWrapper
+      id={'generate'}
       header={"generate your workout"}
       title={['It\'s', 'Huge', 'o\'clock']}>
 

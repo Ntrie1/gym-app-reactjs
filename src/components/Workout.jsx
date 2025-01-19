@@ -5,6 +5,7 @@ import ExerciseCard from './ExerciseCard'
 export default function Workout({ workout }) {
   return (
     <SectionWrapper
+    id={'workout'}
       header={"Welcome to"}
       title={['The', 'DAMGER', 'zone']}>
       <div className='flex flex-col gap-4'>
